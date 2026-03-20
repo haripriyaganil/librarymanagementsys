@@ -1,0 +1,80 @@
+.auth-wrapper {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(40,25,15,0.7), rgba(40,25,15,0.7)),
+    url("../../assets/backgrounds/auth-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+}
+
+/* Glass Card */
+.auth-card {
+  background: linear-gradient(
+    135deg,
+    rgba(59,36,22,0.85),
+    rgba(107,63,37,0.85)
+  );
+  backdrop-filter: blur(12px);
+  padding: 70px 85px;
+  border-radius: 22px;
+  text-align: center;
+  color: #fff1d2;
+  box-shadow:
+    0 35px 70px rgba(0,0,0,0.55),
+    inset 0 0 25px rgba(255,255,255,0.08);
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.auth-card h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+  letter-spacing: 3px;
+  color: #fff6e6;
+}
+
+.auth-card p {
+  font-size: 15px;
+  color: #edd1b0;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+
+.auth-buttons button {
+  background: rgba(243,216,182,0.1);
+  border: 1px solid rgba(243,216,182,0.9);
+  color: #f3d8b6;
+  padding: 12px 36px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.45s ease;
+}
+
+.auth-buttons button:hover {
+  background: rgba(243,216,182,0.95);
+  color: #3b2416;
+  transform: translateY(-6px) scale(1.05);
+  box-shadow:
+    0 10px 25px rgba(243,216,182,0.5),
+    0 0 18px rgba(243,216,182,0.4);
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}

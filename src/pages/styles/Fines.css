@@ -1,0 +1,31 @@
+.fines-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.fines-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.fines-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fine-card {
+  background: linear-gradient(145deg, #5c2e14, #7b4423);
+  color: #f8e6d4;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.total-fine {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #5c2e14;
+}

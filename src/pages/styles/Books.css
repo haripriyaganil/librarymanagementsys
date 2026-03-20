@@ -1,0 +1,296 @@
+/* ================== GLOBAL LIBRARY PAGE ================== */
+.books-page {
+  min-height: 100vh;
+  /* Premium aesthetic background to match the rest of the site */
+  background: linear-gradient(rgba(10, 6, 4, 0.85), rgba(10, 6, 4, 0.95)), url("../../assets/backgrounds/home-about-bg.jpg") center/cover no-repeat fixed;
+  padding: 100px 80px;
+  font-family: "Playfair Display", serif;
+  color: #f6eddc;
+}
+
+.books-title {
+  font-family: "Cinzel", serif;
+  letter-spacing: 6px;
+  font-size: 36px;
+  color: #ffd7a1;
+  text-align: center;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ================== GRID & CARDS ================== */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Category Card */
+.category-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.category-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(183, 138, 72, 0.3);
+  border-color: rgba(183, 138, 72, 0.5);
+}
+
+.category-card h2 {
+  font-family: "Cinzel", serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #ffd7a1;
+  margin: 0;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+/* Glassmorphism Library Card */
+.book-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff1d2;
+  padding: 25px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(183, 138, 72, 0.4);
+  border-color: rgba(183, 138, 72, 0.6);
+}
+
+.book-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.book-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-family: "Cinzel", serif;
+  letter-spacing: 1px;
+  color: #ffd7a1;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #d1bfae;
+  margin-bottom: 12px;
+}
+
+.status {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: auto;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.avail {
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.not-avail {
+  color: #ff4d4d;
+  border: 1px solid rgba(255, 77, 77, 0.3);
+}
+
+/* ================== WISHLIST HEART BTN ================== */
+.heart-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.heart-btn:hover {
+  background: rgba(255, 77, 109, 0.8);
+  border-color: #ff4d6d;
+  transform: scale(1.1);
+}
+
+/* ================== ACTION BUTTONS ================== */
+.status-btn, .return-btn, .remove-btn {
+  margin-top: 15px;
+  width: 100%;
+  background: linear-gradient(135deg, #b78a48, #8a6327);
+  color: #1a110a;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Cinzel", serif;
+  transition: all 0.3s ease;
+}
+
+.status-btn:hover, .return-btn:hover, .remove-btn:hover {
+  background: linear-gradient(135deg, #d4a55d, #a67a36);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(183, 138, 72, 0.4);
+}
+
+/* ================== BOOK DETAILS PAGE ================== */
+.details-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 40px;
+}
+
+.detail-card {
+  position: relative;
+  width: 350px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  color: #fff1d2;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.detail-card img {
+  width: 100%;
+  max-width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.detail-card h2 {
+  font-family: "Cinzel", serif;
+  font-size: 24px;
+  color: #ffd7a1;
+  margin-bottom: 10px;
+}
+
+.book-info-panel {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 18px;
+  color: #f6eddc;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.info-block {
+  margin-bottom: 30px;
+}
+
+.info-block h3 {
+  font-family: "Cinzel", serif;
+  color: #b78a48;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.info-block p {
+  line-height: 1.8;
+  color: #d1bfae;
+}
+
+/* ================== BORROW ACTION IN DETAILS ================== */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.borrow-btn, .back-btn {
+  flex: 1;
+  background: linear-gradient(135deg, #b78a48, #8a6327);
+  color: #1a110a;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Cinzel", serif;
+  transition: all 0.3s ease;
+}
+
+.back-btn {
+  background: transparent;
+  color: #b78a48;
+  border: 1px solid #b78a48;
+}
+
+.borrow-btn:hover {
+  background: linear-gradient(135deg, #d4a55d, #a67a36);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(183, 138, 72, 0.3);
+}
+
+.back-btn:hover {
+  background: rgba(183, 138, 72, 0.1);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

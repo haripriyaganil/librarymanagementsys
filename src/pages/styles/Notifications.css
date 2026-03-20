@@ -1,0 +1,122 @@
+/* ================== NOTIFICATIONS PAGE ================== */
+.notifications-page {
+  min-height: 100vh;
+  padding: 100px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "Playfair Display", serif;
+  color: #f6eddc;
+}
+
+.notifications-page h1 {
+  font-family: "Cinzel", serif;
+  font-size: 38px;
+  letter-spacing: 4px;
+  color: #ffd7a1;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ================== NOTIFICATION CARD (GLASSMORPHISM) ================== */
+.notification-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.notification-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(183, 138, 72, 0.3);
+  border-color: rgba(183, 138, 72, 0.5);
+}
+
+.notification-card.unread {
+  background: rgba(183, 138, 72, 0.08);
+  border-left: 4px solid #b78a48;
+}
+
+.notification-content p {
+  color: #f6eddc;
+  margin: 0 0 8px 0;
+  font-size: 1.15rem;
+  font-family: "Playfair Display", serif;
+}
+
+.notification-time {
+  font-size: 0.9rem;
+  color: #d1bfae;
+  font-style: italic;
+}
+
+.notification-actions {
+  min-width: 130px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ================== BUTTONS ================== */
+.mark-read-btn {
+  background: transparent;
+  color: #b78a48;
+  border: 1px solid #b78a48;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Cinzel", serif;
+  transition: all 0.25s;
+}
+
+.mark-read-btn:hover {
+  background: #b78a48;
+  color: #1a110a;
+  box-shadow: 0 5px 15px rgba(183, 138, 72, 0.4);
+}
+
+.no-notifications {
+  color: #d1bfae;
+  text-align: center;
+  padding: 50px;
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  font-style: italic;
+}
+
+/* ================== BELL ICON & BADGE ================== */
+.bell-icon {
+  position: relative;
+  font-size: 1.3rem;
+  color: #ffd7a1;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #ff4d4f;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 3px 6px;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}

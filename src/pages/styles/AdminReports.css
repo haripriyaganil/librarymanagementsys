@@ -1,0 +1,75 @@
+/* ================== ADMIN REPORTS PAGE ================== */
+.admin-reports {
+  min-height: 100vh;
+  padding: 100px 80px;
+  background: radial-gradient(circle at top, #2e1d14, #1c110b, #0a0604);
+  font-family: "Playfair Display", serif;
+  color: #f6eddc;
+}
+
+.reports-title {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: 5px;
+  color: #ffd7a1;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================== REPORT CARD (GLASSMORPHISM) ================== */
+.report-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f6eddc;
+  padding: 35px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.report-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(183, 138, 72, 0.15), transparent 70%);
+  opacity: 0;
+  transition: 0.5s ease;
+  pointer-events: none;
+}
+
+.report-card:hover::after {
+  opacity: 1;
+}
+
+.report-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(183, 138, 72, 0.3);
+  border-color: rgba(183, 138, 72, 0.5);
+}
+
+.report-card h3 {
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #ffd7a1;
+}
+
+.report-card p {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+}

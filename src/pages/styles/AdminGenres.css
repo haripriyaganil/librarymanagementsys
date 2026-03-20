@@ -1,0 +1,112 @@
+/* ================== ADMIN GENRES PAGE ================== */
+.admin-page {
+  min-height: 100vh;
+  padding: 100px 80px;
+  background: radial-gradient(circle at top, #2e1d14, #1c110b, #0a0604);
+  font-family: "Playfair Display", serif;
+  color: #f6eddc;
+}
+
+.admin-title {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: 5px;
+  margin-bottom: 50px;
+  color: #ffd7a1;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ================== ADD GENRE CONTROLS ================== */
+.add-genre {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.add-genre input {
+  padding: 12px 20px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #f6eddc;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.add-genre input:focus {
+  border-color: #b78a48;
+  box-shadow: 0 0 10px rgba(183, 138, 72, 0.3);
+}
+
+.add-genre button {
+  background: linear-gradient(135deg, #b78a48, #8a6327);
+  color: #1a110a;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.add-genre button:hover {
+  background: linear-gradient(135deg, #d4a55d, #a67a36);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(183, 138, 72, 0.3);
+}
+
+/* ================== GENRE LIST ================== */
+.genre-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ================== GENRE CARD (GLASSMORPHISM) ================== */
+.genre-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f6eddc;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.genre-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(183, 138, 72, 0.3);
+  border-color: rgba(183, 138, 72, 0.5);
+}
+
+.genre-card button {
+  background: transparent;
+  border: none;
+  color: #ff4d4d;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.genre-card button:hover {
+  transform: scale(1.2);
+  color: #ff1a1a;
+  text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+}

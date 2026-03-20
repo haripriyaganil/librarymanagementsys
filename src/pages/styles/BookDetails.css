@@ -1,0 +1,215 @@
+/* ================== BOOK DETAILS PAGE ================== */
+.book-detail-page {
+  min-height: 100vh;
+  padding: 100px 40px;
+  background: linear-gradient(rgba(10, 6, 4, 0.85), rgba(10, 6, 4, 0.95)), url("../../assets/backgrounds/home-about-bg.jpg") center/cover no-repeat fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  color: #f6eddc;
+  box-sizing: border-box;
+}
+
+.detail-layout-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ================== BOOK CARD (GLASSMORPHISM) ================== */
+.detail-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 45px 40px;
+  border-radius: 16px;
+  text-align: center;
+  color: #f6eddc;
+  width: 380px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.heart-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #b78a48;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.heart-btn:hover {
+  transform: scale(1.1);
+}
+
+.detail-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.detail-card h2 {
+  font-family: "Cinzel", serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #ffd7a1;
+}
+
+.detail-card .author {
+  font-size: 16px;
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 25px;
+  color: #d1bfae;
+}
+
+.status {
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #f6eddc;
+  margin-bottom: 30px;
+}
+
+.avail {
+  color: #4caf50;
+  text-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ================== ACTION BUTTONS ================== */
+.borrow-btn, .wishlist-btn, .back-btn {
+  width: 200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.borrow-btn {
+  background: linear-gradient(135deg, #b78a48, #8a6327);
+  color: #1a110a;
+}
+
+.borrow-btn:hover {
+  background: linear-gradient(135deg, #d4a55d, #a67a36);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(183, 138, 72, 0.4);
+}
+
+.wishlist-btn {
+  background: rgba(255, 77, 77, 0.1);
+  color: #ff4d4d;
+  border: 1px solid rgba(255, 77, 77, 0.3);
+}
+
+.wishlist-btn:hover {
+  background: rgba(255, 77, 77, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 77, 77, 0.2);
+}
+
+.return-btn, .back-btn {
+  background: transparent;
+  color: #b78a48;
+  border: 1px solid #b78a48;
+}
+
+.return-btn:hover, .back-btn:hover {
+  background: rgba(183, 138, 72, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(183, 138, 72, 0.2);
+}
+
+.success-toast {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  margin-bottom: 25px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================== EXTRA INFO SECTION ================== */
+.book-extra-section {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 45px 50px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.extra-info-block {
+  margin-bottom: 35px;
+}
+
+.extra-info-block:last-child {
+  margin-bottom: 0;
+}
+
+.book-extra-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #ffd7a1;
+  font-family: "Cinzel", serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.book-extra-section p {
+  color: #f6eddc;
+  line-height: 1.8;
+  font-size: 16px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .detail-layout-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}

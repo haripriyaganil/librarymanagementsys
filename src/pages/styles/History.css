@@ -1,0 +1,71 @@
+/* ================== HISTORY PAGE ================== */
+.history-page {
+  min-height: 100vh;
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle at top, #2e1d14, #1c110b, #0a0604);
+  font-family: "Playfair Display", serif;
+  color: #f6eddc;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+}
+
+/* ================== HISTORY CATEGORY CARD ================== */
+.history-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f6eddc;
+  padding: 30px 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.history-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(183, 138, 72, 0.15), transparent 70%);
+  opacity: 0;
+  transition: 0.5s ease;
+  pointer-events: none;
+}
+
+.history-card:hover::after {
+  opacity: 1;
+}
+
+.history-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(183, 138, 72, 0.3);
+  border-color: rgba(183, 138, 72, 0.5);
+}
+
+.history-card h3 {
+  font-family: "Cinzel", serif;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #ffd7a1;
+  font-size: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.history-card p {
+  font-size: 15px;
+  margin: 10px 0;
+  color: #d1bfae;
+}

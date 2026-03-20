@@ -1,0 +1,78 @@
+/* ================== GLOBAL DASHBOARDS ================== */
+.dashboard-page {
+  min-height: 100vh;
+  /* Premium Dark Academia backdrop */
+  background: linear-gradient(rgba(10, 6, 4, 0.85), rgba(10, 6, 4, 0.95)), url("../../assets/backgrounds/home-about-bg.jpg") center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 100px;
+  font-family: "Playfair Display", serif;
+  color: #f6eddc;
+}
+
+/* TITLE */
+.dashboard-title {
+  font-family: "Cinzel", serif;
+  font-size: 38px;
+  margin-bottom: 50px;
+  color: #ffd7a1;
+  letter-spacing: 5px;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* VERTICAL STACK FOR DASHBOARDS */
+.dashboard-center {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* GLASSMORPHISM CARD */
+.dash-card {
+  width: 100%;
+  padding: 28px 35px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffd7a1;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-family: "Cinzel", serif;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+}
+
+/* GLOW AND HOVER EFFECTS */
+.dash-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(183, 138, 72, 0.15), transparent 70%);
+  opacity: 0;
+  transition: 0.5s ease;
+  pointer-events: none;
+}
+
+.dash-card:hover::after {
+  opacity: 1;
+}
+
+.dash-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(183, 138, 72, 0.3);
+  border-color: rgba(183, 138, 72, 0.5);
+  color: #fff;
+}
